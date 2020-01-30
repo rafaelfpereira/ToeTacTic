@@ -7,12 +7,14 @@ import styles from './game.style';
 function GameScreen() {
   return (
     <View style={styles.screen}>
+      <View />
       <TimeBoardSection>
         <PlayerTag tag="jogador 1" />
         <Timer time="30" />
         <PlayerTag tag="jogador 2" />
       </TimeBoardSection>
       <GameBoardSection>
+        {/* in the future, squares should come from the api */}
         <Square mark="x"/>
         <Square mark="x"/>
         <Square mark="o"/>
@@ -25,6 +27,12 @@ function GameScreen() {
       </GameBoardSection>
     </View>
   );
+}
+
+GameScreen.navigationOptions = {
+  title: 'ToeTacTic',
+  headerStyle: styles.navigationHeader,
+  headerTitleStyle: styles.navigationTitle,
 }
 
 export default GameScreen;
