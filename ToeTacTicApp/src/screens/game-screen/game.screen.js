@@ -7,7 +7,6 @@ import styles from './game.style';
 function GameScreen() {
   return (
     <View style={styles.screen}>
-      <View />
       <TimeBoardSection>
         <PlayerTag tag="jogador 1" />
         <Timer time="30" />
